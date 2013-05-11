@@ -2,16 +2,20 @@
   <div class="post">
     <!-- <a href="#" class="upvote btn {{upvotedClass}}">⬆</a> -->
     <div class="post-content">
-      <h3><a href="{{url}}">{{title}}</a><span>{{domain}}</span></h3>
+      <h3><a href="{{url}}">{{title}}</a><span>({{domain}})</span></h3>
       <p>
         <!-- {{pluralize votes "Vote"}}, -->
         submitted by {{author}},
-        <a href="{{postPagePath this}}">{{pluralize commentsCount "update"}}</a>
+        <a href="{{postPagePath this}}">{{pluralize commentsCount "comment"}}</a>
         {{#if ownPost}}
           <a href="{{postEditPath this}}">Edit</a>
-          <a href="{{postPagePath this}}" class="discuss btn">Add Details</a>
+<!--           <a href="{{postPagePath this}}" class="discuss btn">Update</a> -->
         {{/if}}
       </p>
+      <dir>
+        <p>{{message}}</p>
+      </dir>
     </div>
+
   </div>
 </template>
